@@ -1,0 +1,706 @@
+[gd_resource type="SpriteFrames" load_steps=175 format=3 uid="uid://cmavhkpjmsou2"]
+
+[ext_resource type="Texture2D" uid="uid://dhovxt6dmc77v" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_000.png" id="1_b230k"]
+[ext_resource type="Texture2D" uid="uid://cyhhdl7ku0kn8" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_050.png" id="2_lwsqd"]
+[ext_resource type="Texture2D" uid="uid://dwi0tmcpitptt" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_100.png" id="3_q5o85"]
+[ext_resource type="Texture2D" uid="uid://leghpgk4thsl" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_150.png" id="4_br4uv"]
+[ext_resource type="Texture2D" uid="uid://crrj12go0vrt4" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_200.png" id="5_jd1db"]
+[ext_resource type="Texture2D" uid="uid://cnemqnepawlme" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_250.png" id="6_042a4"]
+[ext_resource type="Texture2D" uid="uid://yypjm3q32drd" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_300.png" id="7_tfeji"]
+[ext_resource type="Texture2D" uid="uid://b6nwcyprtnuqc" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_350.png" id="8_5i3pa"]
+[ext_resource type="Texture2D" uid="uid://87visq3lp6mw" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_400.png" id="9_i1tkb"]
+[ext_resource type="Texture2D" uid="uid://d4h5w0glijxq7" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_450.png" id="10_1m751"]
+[ext_resource type="Texture2D" uid="uid://dv6nnbp3g8qtx" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_500.png" id="11_cts3s"]
+[ext_resource type="Texture2D" uid="uid://ctf0eq6gn7kws" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_550.png" id="12_dftlw"]
+[ext_resource type="Texture2D" uid="uid://bpjufc5wxo6wj" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_600.png" id="13_t6yfr"]
+[ext_resource type="Texture2D" uid="uid://cnvhi64kthy3x" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_650.png" id="14_o0adj"]
+[ext_resource type="Texture2D" uid="uid://qekdmmwej2uv" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_700.png" id="15_r6g36"]
+[ext_resource type="Texture2D" uid="uid://cn3y2enmddcv0" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_750.png" id="16_dr32p"]
+[ext_resource type="Texture2D" uid="uid://3nm78ldwxy3t" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_800.png" id="17_s2ikl"]
+[ext_resource type="Texture2D" uid="uid://dxoyje5wia8o7" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_850.png" id="18_ekqxb"]
+[ext_resource type="Texture2D" uid="uid://c7la88fn3aus8" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_900.png" id="19_5lj4u"]
+[ext_resource type="Texture2D" uid="uid://cnjn5nq83j1vv" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-00_950.png" id="20_nokii"]
+[ext_resource type="Texture2D" uid="uid://ct2i0etpbx52l" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_000.png" id="21_vuury"]
+[ext_resource type="Texture2D" uid="uid://b8yxusbjgdth7" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_050.png" id="22_h35sq"]
+[ext_resource type="Texture2D" uid="uid://dxap6ikmxye1f" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_100.png" id="23_4c66e"]
+[ext_resource type="Texture2D" uid="uid://b5sc20lwqyq3f" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_150.png" id="24_3sf6i"]
+[ext_resource type="Texture2D" uid="uid://betr1fvo1xx6y" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_200.png" id="25_ovhae"]
+[ext_resource type="Texture2D" uid="uid://dj0il0ld2wqrx" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_250.png" id="26_v8p0d"]
+[ext_resource type="Texture2D" uid="uid://buos8amnyowxo" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_300.png" id="27_4rhl7"]
+[ext_resource type="Texture2D" uid="uid://btg6nt58xpcq8" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_350.png" id="28_78kws"]
+[ext_resource type="Texture2D" uid="uid://cckav1clvfyaw" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_400.png" id="29_0hw0x"]
+[ext_resource type="Texture2D" uid="uid://xdi4qx0pvplb" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_450.png" id="30_sr8bg"]
+[ext_resource type="Texture2D" uid="uid://d0qluvri3g2ai" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_500.png" id="31_sv7a1"]
+[ext_resource type="Texture2D" uid="uid://cbpuxipkmumte" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_550.png" id="32_4e540"]
+[ext_resource type="Texture2D" uid="uid://dlx5y2rb5xpfd" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_600.png" id="33_icwdq"]
+[ext_resource type="Texture2D" uid="uid://cql70ay15gvuf" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_650.png" id="34_lmbgq"]
+[ext_resource type="Texture2D" uid="uid://6qdc4yqnrhjw" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_700.png" id="35_bxmji"]
+[ext_resource type="Texture2D" uid="uid://ca5xckwr36p2y" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_750.png" id="36_rhqgf"]
+[ext_resource type="Texture2D" uid="uid://cub2q2nhlb3pc" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_800.png" id="37_kjhtu"]
+[ext_resource type="Texture2D" uid="uid://bcnumt87fylcy" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_850.png" id="38_8dpo0"]
+[ext_resource type="Texture2D" uid="uid://dnxiuxvjf31sh" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_900.png" id="39_riih1"]
+[ext_resource type="Texture2D" uid="uid://cl2n8dqwq36tk" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-01_950.png" id="40_l8aul"]
+[ext_resource type="Texture2D" uid="uid://jhfj1j24osku" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_000.png" id="41_887ep"]
+[ext_resource type="Texture2D" uid="uid://u04e8tlujtq5" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_050.png" id="42_jdfcs"]
+[ext_resource type="Texture2D" uid="uid://deb7nddsakoev" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_100.png" id="43_ljsgo"]
+[ext_resource type="Texture2D" uid="uid://dbtjcfq2wo7ha" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_150.png" id="44_y3wqj"]
+[ext_resource type="Texture2D" uid="uid://bntn6pjhwyqvb" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_200.png" id="45_2i0fg"]
+[ext_resource type="Texture2D" uid="uid://bvmabplga3rc5" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_250.png" id="46_yyjax"]
+[ext_resource type="Texture2D" uid="uid://cjhhb31ck3tn3" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_300.png" id="47_yeoq6"]
+[ext_resource type="Texture2D" uid="uid://h0xlu7ufdftt" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_350.png" id="48_yrdfk"]
+[ext_resource type="Texture2D" uid="uid://cibeddokou5y5" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_400.png" id="49_t6n6u"]
+[ext_resource type="Texture2D" uid="uid://hqp580xgwo4k" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_450.png" id="50_sln6w"]
+[ext_resource type="Texture2D" uid="uid://bp5jbs0pjepti" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_500.png" id="51_xvttd"]
+[ext_resource type="Texture2D" uid="uid://dpkbowyw6qois" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_550.png" id="52_b4y8d"]
+[ext_resource type="Texture2D" uid="uid://hiv48gvp3uhy" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_600.png" id="53_qi6kh"]
+[ext_resource type="Texture2D" uid="uid://cwwkwaq3sfwuk" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_650.png" id="54_4ydm1"]
+[ext_resource type="Texture2D" uid="uid://blt1anfjlfr7i" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_700.png" id="55_jagjm"]
+[ext_resource type="Texture2D" uid="uid://fryqwh0fhrnm" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_750.png" id="56_gxuin"]
+[ext_resource type="Texture2D" uid="uid://cfnnc7hco11a8" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_800.png" id="57_pyoep"]
+[ext_resource type="Texture2D" uid="uid://lcaddlej642v" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_850.png" id="58_divwr"]
+[ext_resource type="Texture2D" uid="uid://cbmlh8308ick1" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_900.png" id="59_xop4r"]
+[ext_resource type="Texture2D" uid="uid://braqsf0y3e3rh" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-02_950.png" id="60_a8okr"]
+[ext_resource type="Texture2D" uid="uid://d3eauio0xplki" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_000.png" id="61_kq3va"]
+[ext_resource type="Texture2D" uid="uid://bvuv1ynyxjm4p" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_050.png" id="62_vcyh5"]
+[ext_resource type="Texture2D" uid="uid://c3gde4f6rd3hn" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_100.png" id="63_tjrfi"]
+[ext_resource type="Texture2D" uid="uid://jk3sjdjr5xye" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_150.png" id="64_0h1kb"]
+[ext_resource type="Texture2D" uid="uid://c1mwbo24lvxgi" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_200.png" id="65_k1a83"]
+[ext_resource type="Texture2D" uid="uid://oc6yw88aye1n" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_250.png" id="66_kfhtn"]
+[ext_resource type="Texture2D" uid="uid://yqw78h3nb62h" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_300.png" id="67_bn6vm"]
+[ext_resource type="Texture2D" uid="uid://cq5gnr0nyi5pv" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_350.png" id="68_k1yt3"]
+[ext_resource type="Texture2D" uid="uid://ga75ndo5upnn" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_400.png" id="69_jjkyr"]
+[ext_resource type="Texture2D" uid="uid://bgkbistu4ppxe" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_450.png" id="70_pplu8"]
+[ext_resource type="Texture2D" uid="uid://ds1wq3ppj8hpn" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_500.png" id="71_kmmhn"]
+[ext_resource type="Texture2D" uid="uid://kjfgiruq1gax" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_550.png" id="72_130g3"]
+[ext_resource type="Texture2D" uid="uid://bbdnx6cyhb3fu" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_600.png" id="73_uptbo"]
+[ext_resource type="Texture2D" uid="uid://0lfjeugot20y" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_650.png" id="74_y7ay6"]
+[ext_resource type="Texture2D" uid="uid://c3lgoxr6lwoci" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_700.png" id="75_7ujpb"]
+[ext_resource type="Texture2D" uid="uid://d0hxorw0xvylr" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_750.png" id="76_1a7ac"]
+[ext_resource type="Texture2D" uid="uid://dh1acvk4sh6p7" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_800.png" id="77_2tise"]
+[ext_resource type="Texture2D" uid="uid://n8q7btifx7nb" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_850.png" id="78_3k2ck"]
+[ext_resource type="Texture2D" uid="uid://bqa2vbofghe4f" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_900.png" id="79_5b5c0"]
+[ext_resource type="Texture2D" uid="uid://d3nknobtxyr6e" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-03_950.png" id="80_q4bat"]
+[ext_resource type="Texture2D" uid="uid://cmkvr81unnudd" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_000.png" id="81_pnnk0"]
+[ext_resource type="Texture2D" uid="uid://vwbl5fih4dkk" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_050.png" id="82_blfns"]
+[ext_resource type="Texture2D" uid="uid://xds6sp08fvm8" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_100.png" id="83_jxfld"]
+[ext_resource type="Texture2D" uid="uid://dxamewj3v3hr3" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_150.png" id="84_xto71"]
+[ext_resource type="Texture2D" uid="uid://bl77hej5v4lws" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_200.png" id="85_fif3b"]
+[ext_resource type="Texture2D" uid="uid://cdj1o1x4vtne4" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_250.png" id="86_r5127"]
+[ext_resource type="Texture2D" uid="uid://bref32tesmsmr" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_300.png" id="87_vhldd"]
+[ext_resource type="Texture2D" uid="uid://7u51honudvr1" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_350.png" id="88_qaq7h"]
+[ext_resource type="Texture2D" uid="uid://5a8cwhaosdd" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_400.png" id="89_f06ub"]
+[ext_resource type="Texture2D" uid="uid://c2emvwmvg3tfw" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_450.png" id="90_kuho1"]
+[ext_resource type="Texture2D" uid="uid://d0xv66ugjj28u" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_500.png" id="91_yw0xi"]
+[ext_resource type="Texture2D" uid="uid://pnifoatxjhqs" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_550.png" id="92_p7qyf"]
+[ext_resource type="Texture2D" uid="uid://hvoovivo4ueh" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_600.png" id="93_l10df"]
+[ext_resource type="Texture2D" uid="uid://cdbj2811s284i" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_650.png" id="94_3byek"]
+[ext_resource type="Texture2D" uid="uid://bnekd3osvkrdy" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_700.png" id="95_g7bof"]
+[ext_resource type="Texture2D" uid="uid://dhkcrg4uqbb6f" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_750.png" id="96_7xqr4"]
+[ext_resource type="Texture2D" uid="uid://dqorvrafsihx8" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_800.png" id="97_cctac"]
+[ext_resource type="Texture2D" uid="uid://dao5fwc3g47p3" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_850.png" id="98_06vbl"]
+[ext_resource type="Texture2D" uid="uid://5ooier5hncn" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_900.png" id="99_osqoo"]
+[ext_resource type="Texture2D" uid="uid://diacdfxfa4frk" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-04_950.png" id="100_mg1h6"]
+[ext_resource type="Texture2D" uid="uid://bn1aw17nrx7tr" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_000.png" id="101_5t0ew"]
+[ext_resource type="Texture2D" uid="uid://bc7pce8yaafm2" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_050.png" id="102_8axq7"]
+[ext_resource type="Texture2D" uid="uid://bxubelfm473e1" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_100.png" id="103_82s7u"]
+[ext_resource type="Texture2D" uid="uid://b84mau3mxlphe" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_150.png" id="104_j470r"]
+[ext_resource type="Texture2D" uid="uid://b5oahl1f0u6ou" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_200.png" id="105_eneda"]
+[ext_resource type="Texture2D" uid="uid://cbhffwp6y37yw" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_250.png" id="106_d5ad0"]
+[ext_resource type="Texture2D" uid="uid://des3s7d5baf7t" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_300.png" id="107_a0b0t"]
+[ext_resource type="Texture2D" uid="uid://cw0mi8ylgxgjx" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_350.png" id="108_el3jb"]
+[ext_resource type="Texture2D" uid="uid://yx54eb8wymby" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_400.png" id="109_q24wl"]
+[ext_resource type="Texture2D" uid="uid://dw55j1j7tpihk" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_450.png" id="110_00qn6"]
+[ext_resource type="Texture2D" uid="uid://o4i65q8vl0xi" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_500.png" id="111_qw8v2"]
+[ext_resource type="Texture2D" uid="uid://r0pm0dlrl4jn" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_550.png" id="112_rvrws"]
+[ext_resource type="Texture2D" uid="uid://bg4r87fg8s42n" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_600.png" id="113_yyy0l"]
+[ext_resource type="Texture2D" uid="uid://2cqkdsd0ucrv" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_650.png" id="114_cnejs"]
+[ext_resource type="Texture2D" uid="uid://ihivpi6l47fj" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_700.png" id="115_wq2ba"]
+[ext_resource type="Texture2D" uid="uid://ckcp7ctkkxeaa" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_750.png" id="116_qdxi1"]
+[ext_resource type="Texture2D" uid="uid://c0wq38r1yjc6d" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_800.png" id="117_4qsbd"]
+[ext_resource type="Texture2D" uid="uid://cubr4aot3byb5" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_850.png" id="118_r41im"]
+[ext_resource type="Texture2D" uid="uid://bobmsm8cxgeb2" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_900.png" id="119_eebqf"]
+[ext_resource type="Texture2D" uid="uid://17hymijho3kb" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-05_950.png" id="120_s3eh8"]
+[ext_resource type="Texture2D" uid="uid://crrf0bc6qxw3m" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_000.png" id="121_06uq0"]
+[ext_resource type="Texture2D" uid="uid://0txufrbq1t3p" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_050.png" id="122_gcl40"]
+[ext_resource type="Texture2D" uid="uid://crmojfq4dxikn" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_100.png" id="123_4cccr"]
+[ext_resource type="Texture2D" uid="uid://cyn5hxxae4pfv" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_150.png" id="124_7k5cp"]
+[ext_resource type="Texture2D" uid="uid://cbysfnll1tqpm" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_200.png" id="125_tpn4n"]
+[ext_resource type="Texture2D" uid="uid://ct5ou2e6k4cfj" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_250.png" id="126_h1yre"]
+[ext_resource type="Texture2D" uid="uid://brn461jgq3qch" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_300.png" id="127_2g2m4"]
+[ext_resource type="Texture2D" uid="uid://b0xqdpqlmfpby" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_350.png" id="128_wiryt"]
+[ext_resource type="Texture2D" uid="uid://die8hhei44rhu" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_400.png" id="129_kfm4l"]
+[ext_resource type="Texture2D" uid="uid://cu41sl676ihji" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_450.png" id="130_sirnh"]
+[ext_resource type="Texture2D" uid="uid://2optg1m3511e" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_500.png" id="131_1dpvw"]
+[ext_resource type="Texture2D" uid="uid://bhwu4h35u2f1o" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_550.png" id="132_eia2g"]
+[ext_resource type="Texture2D" uid="uid://bnvauk38naxyg" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_600.png" id="133_q8div"]
+[ext_resource type="Texture2D" uid="uid://duxp6xiu6wm72" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_650.png" id="134_jo46o"]
+[ext_resource type="Texture2D" uid="uid://83jwger1otl3" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_700.png" id="135_rv2ws"]
+[ext_resource type="Texture2D" uid="uid://jw2crpyj36ta" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_750.png" id="136_huqty"]
+[ext_resource type="Texture2D" uid="uid://e3fne4gah1s7" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_800.png" id="137_02ixk"]
+[ext_resource type="Texture2D" uid="uid://bx81k2xuldhvm" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_850.png" id="138_wo7kg"]
+[ext_resource type="Texture2D" uid="uid://cjni01n5qndjh" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_900.png" id="139_jm3gi"]
+[ext_resource type="Texture2D" uid="uid://1tbksaxfnv8m" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-06_950.png" id="140_0j2il"]
+[ext_resource type="Texture2D" uid="uid://dfiohf3fi8i6b" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_000.png" id="141_nf5vd"]
+[ext_resource type="Texture2D" uid="uid://cb8uqakhsxj8k" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_050.png" id="142_j8icr"]
+[ext_resource type="Texture2D" uid="uid://utdlgx1ta53" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_100.png" id="143_2mvde"]
+[ext_resource type="Texture2D" uid="uid://bpfy27p6f72dl" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_150.png" id="144_amkvp"]
+[ext_resource type="Texture2D" uid="uid://b1eiwyy2e1m3m" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_200.png" id="145_2ksjy"]
+[ext_resource type="Texture2D" uid="uid://27nacfqobljn" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_250.png" id="146_2yr48"]
+[ext_resource type="Texture2D" uid="uid://belkpmb2xqs54" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_300.png" id="147_hbpeq"]
+[ext_resource type="Texture2D" uid="uid://dktyb7ft5c4nm" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_350.png" id="148_vfo41"]
+[ext_resource type="Texture2D" uid="uid://q0g6al44epns" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_400.png" id="149_hkqlj"]
+[ext_resource type="Texture2D" uid="uid://dxlgf84y5a8vw" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_450.png" id="150_d3vv6"]
+[ext_resource type="Texture2D" uid="uid://dn8hruqtnb3up" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_500.png" id="151_4ab32"]
+[ext_resource type="Texture2D" uid="uid://wbmbhn7q5quf" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_550.png" id="152_3jg0j"]
+[ext_resource type="Texture2D" uid="uid://b3tjbfghmx60r" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_600.png" id="153_4drs6"]
+[ext_resource type="Texture2D" uid="uid://bnol5o0o4lxap" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_650.png" id="154_awqui"]
+[ext_resource type="Texture2D" uid="uid://6vye3jp17i54" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_700.png" id="155_fpxxd"]
+[ext_resource type="Texture2D" uid="uid://dna64n5pj0wpk" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_750.png" id="156_adghg"]
+[ext_resource type="Texture2D" uid="uid://t2k11y3ui8wg" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_800.png" id="157_ut1cm"]
+[ext_resource type="Texture2D" uid="uid://c13ll0r60gxex" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_850.png" id="158_uj38h"]
+[ext_resource type="Texture2D" uid="uid://boe6afp1ib8b" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_900.png" id="159_n65u0"]
+[ext_resource type="Texture2D" uid="uid://d2d1maklcv1dn" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-07_950.png" id="160_m3u81"]
+[ext_resource type="Texture2D" uid="uid://21xdplxs8v4b" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_000.png" id="161_b7r44"]
+[ext_resource type="Texture2D" uid="uid://bgoo32lffjvef" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_050.png" id="162_r3r1c"]
+[ext_resource type="Texture2D" uid="uid://bhb8wf1ir0hlj" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_100.png" id="163_olwh6"]
+[ext_resource type="Texture2D" uid="uid://dcc2ap2g4hp72" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_150.png" id="164_cako0"]
+[ext_resource type="Texture2D" uid="uid://dx00cu7n3ka6n" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_200.png" id="165_fiv2l"]
+[ext_resource type="Texture2D" uid="uid://c0b5iwlshcq04" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_250.png" id="166_tmjuf"]
+[ext_resource type="Texture2D" uid="uid://dq0llb8htuo7y" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_300.png" id="167_raqeq"]
+[ext_resource type="Texture2D" uid="uid://ccem8yf8kp2jw" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_350.png" id="168_xdh5e"]
+[ext_resource type="Texture2D" uid="uid://qxhwc1aaqxnp" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_400.png" id="169_gwmne"]
+[ext_resource type="Texture2D" uid="uid://day7q47h74gq7" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_450.png" id="170_dtted"]
+[ext_resource type="Texture2D" uid="uid://b7b2t7jk0bmrd" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_500.png" id="171_cdvl5"]
+[ext_resource type="Texture2D" uid="uid://dldtarrpin0v4" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_550.png" id="172_o2lrw"]
+[ext_resource type="Texture2D" uid="uid://bhjl7bvvh14ll" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_600.png" id="173_ymsk0"]
+[ext_resource type="Texture2D" uid="uid://bdqiqil00ryw7" path="res://Phrolova/images/visual/《鸣潮》弗洛洛_compressed_resized_frame_00-08_650.png" id="174_kf4jb"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b230k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lwsqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q5o85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_br4uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jd1db")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_042a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tfeji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5i3pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i1tkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1m751")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cts3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dftlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t6yfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_o0adj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_r6g36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dr32p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_s2ikl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ekqxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5lj4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_nokii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vuury")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_h35sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_4c66e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_3sf6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ovhae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_v8p0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_4rhl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_78kws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0hw0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_sr8bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_sv7a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_4e540")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_icwdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_lmbgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_bxmji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_rhqgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_kjhtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_8dpo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_riih1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_l8aul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_887ep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_jdfcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ljsgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_y3wqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_2i0fg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_yyjax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_yeoq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_yrdfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_t6n6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_sln6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_xvttd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_b4y8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_qi6kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_4ydm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_jagjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_gxuin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_pyoep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_divwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_xop4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_a8okr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_kq3va")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_vcyh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_tjrfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_0h1kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_k1a83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_kfhtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_bn6vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_k1yt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_jjkyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_pplu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_kmmhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_130g3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_uptbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_y7ay6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_7ujpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_1a7ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_2tise")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_3k2ck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_5b5c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_q4bat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_pnnk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_blfns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_jxfld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_xto71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_fif3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_r5127")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_vhldd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_qaq7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_f06ub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_kuho1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_yw0xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_p7qyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_l10df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_3byek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_g7bof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_7xqr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_cctac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_06vbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_osqoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_mg1h6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_5t0ew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_8axq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_82s7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_j470r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_eneda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_d5ad0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_a0b0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_el3jb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_q24wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_00qn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_qw8v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_rvrws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_yyy0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_cnejs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_wq2ba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_qdxi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_4qsbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_r41im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_eebqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_s3eh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_06uq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_gcl40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_4cccr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_7k5cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_tpn4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_h1yre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_2g2m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_wiryt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_kfm4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_sirnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_1dpvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_eia2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_q8div")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_jo46o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_rv2ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_huqty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_02ixk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_wo7kg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_jm3gi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_0j2il")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_nf5vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_j8icr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_2mvde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_amkvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_2ksjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_2yr48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_hbpeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_vfo41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_hkqlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_d3vv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_4ab32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_3jg0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_4drs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_awqui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_fpxxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_adghg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_ut1cm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_uj38h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_n65u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_m3u81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_b7r44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_r3r1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_olwh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_cako0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_fiv2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_tmjuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_raqeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_xdh5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_gwmne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_dtted")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_cdvl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_o2lrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_ymsk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_kf4jb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]

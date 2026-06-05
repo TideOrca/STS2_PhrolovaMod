@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://br6kc1c8o22sx"
+path="res://.godot/imported/a_fuluoluo_0.skel-3efb9ff1f67e4506ced73e7c650b3d5d.spskel"
+
+[deps]
+
+source_file="res://Phrolova/spine/a_fuluoluo_0.skel"
+dest_files=["res://.godot/imported/a_fuluoluo_0.skel-3efb9ff1f67e4506ced73e7c650b3d5d.spskel"]
+
+[params]
+

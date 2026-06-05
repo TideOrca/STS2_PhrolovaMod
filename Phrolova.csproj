@@ -1,0 +1,42 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+
+  <Target Name="CopyCustomOutput" AfterTargets="Build">
+    <ItemGroup>
+      <OutputDlls Include="$(OutputPath)\$(AssemblyName).dll" />
+      <OutputDlls Include="$(OutputPath)\$(AssemblyName).pdb" />
+    </ItemGroup>
+
+    <MakeDir Directories="$(MSBuildProjectDirectory)\build" />
+    <Copy SourceFiles="@(OutputDlls)" DestinationFolder="$(MSBuildProjectDirectory)\build" />
+</Target>
+
+  <ItemGroup>
+    <Content Include="Phrolova\localization\zhs\ancients.json" />
+    <Content Include="Phrolova\localization\zhs\cards.json" />
+    <Content Include="Phrolova\localization\zhs\card_keywords.json" />
+    <Content Include="Phrolova\localization\zhs\characters.json" />
+    <Content Include="Phrolova\localization\zhs\monsters.json" />
+    <Content Include="Phrolova\localization\zhs\powers.json" />
+    <Content Include="Phrolova\localization\zhs\relics.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\dll依赖\beta特供\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseLib">
+      <HintPath>..\..\dll依赖\beta特供\BaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="GodotSharp">
+      <HintPath>..\..\dll依赖\beta特供\GodotSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="sts2">
+      <HintPath>..\..\dll依赖\sts2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

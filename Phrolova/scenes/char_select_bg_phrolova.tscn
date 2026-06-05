@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://2lm3dfpmfb76"]
+
+[ext_resource type="SpriteFrames" uid="uid://cmavhkpjmsou2" path="res://Phrolova/images/ui/background/phrolova_bg_frames.tres" id="1_e6fqi"]
+
+[sub_resource type="Gradient" id="Gradient_i5p72"]
+offsets = PackedFloat32Array(0, 0.178337, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="Curve" id="Curve_v6omp"]
+_data = [Vector2(0, 0.417635), 0.0, 0.0, 0, 0, Vector2(0.502521, 0.507939), 0.0, 0.0, 0, 0, Vector2(1, 0.423164), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_1v5y4"]
+offsets = PackedFloat32Array(0, 0.607407, 0.994413)
+colors = PackedColorArray(0.427493, 0.427493, 0.427493, 1, 1, 1, 1, 1, 0.427451, 0.427451, 0.427451, 1)
+
+[node name="char_select_bg_phrolova" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -521.0
+offset_right = 1600.0
+offset_bottom = 679.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1280, 600)
+
+[node name="char_select_bg_phrolova" type="AnimatedSprite2D" parent="."]
+position = Vector2(1002.7499, 537.00006)
+scale = Vector2(1.4496092, 1.4000002)
+sprite_frames = ExtResource("1_e6fqi")
+autoplay = "default"
+
+[node name="ash2" type="CPUParticles2D" parent="."]
+position = Vector2(2054, 1163)
+amount = 20
+lifetime = 15.0
+preprocess = 15.0
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(250, 250)
+gravity = Vector2(-50, -75)
+orbit_velocity_max = 0.03
+radial_accel_max = 1.0
+angle_max = 353.6
+scale_amount_min = 2.0
+scale_amount_max = 6.0
+color = Color(1, 0.129412, 1, 1)
+color_ramp = SubResource("Gradient_i5p72")
+
+[node name="ash3" type="CPUParticles2D" parent="."]
+position = Vector2(2054, 1163)
+amount = 20
+lifetime = 15.0
+preprocess = 15.0
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(250, 250)
+gravity = Vector2(-100, -150)
+orbit_velocity_max = 0.03
+radial_accel_max = 1.0
+angle_max = 353.6
+scale_amount_max = 2.0
+color = Color(1, 0.351772, 0.672842, 1)
+color_ramp = SubResource("Gradient_i5p72")
+
+[node name="light_small2" type="CPUParticles2D" parent="."]
+position = Vector2(239, 31)
+rotation = 3.1032
+amount = 1
+lifetime = 3.0
+local_coords = true
+gravity = Vector2(0, 0)
+scale_amount_min = 12.0
+scale_amount_max = 12.0
+scale_amount_curve = SubResource("Curve_v6omp")
+color = Color(0.861643, 3.9371e-05, 0.630184, 0.4)
+color_ramp = SubResource("Gradient_1v5y4")

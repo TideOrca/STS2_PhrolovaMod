@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7ix8e14oytdg"]
+
+[ext_resource type="Texture2D" uid="uid://cssp726rixpo1" path="res://Phrolova/images/characters/rest_site_phrolova.png" id="1_kucyi"]
+[ext_resource type="PackedScene" uid="uid://myq0m2usd1d5" path="res://Phrolova/scenes/selection_reticle.tscn" id="2_tw8na"]
+
+[node name="PhrolovaRestSite" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -281.0
+offset_top = -368.99997
+offset_right = 1767.0
+offset_bottom = 783.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_kucyi")
+
+[node name="ControlRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SelectionReticle" parent="ControlRoot" instance=ExtResource("2_tw8na")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -181.5
+offset_top = -354.0
+offset_right = 108.5
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Hitbox" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -161.0
+offset_top = -314.0
+offset_right = 129.0
+offset_bottom = 50.0
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 107.0
+offset_top = -333.0
+offset_right = 107.0
+offset_bottom = -333.0
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -150.0
+offset_top = -334.0
+offset_right = -150.0
+offset_bottom = -334.0

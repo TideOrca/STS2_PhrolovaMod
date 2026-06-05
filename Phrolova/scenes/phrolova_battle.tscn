@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq82sbr435cri"]
+
+[ext_resource type="Texture2D" uid="uid://bx31ey6jgwt7r" path="res://Phrolova/images/characters/phrolova_temp.png" id="1_s31cn"]
+[ext_resource type="Texture2D" uid="uid://budlfmnmjpvuj" path="res://Phrolova/images/characters/die_phrolova.png" id="2_ghrtj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y8jmh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s31cn")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s31cn")
+}],
+"loop": true,
+"name": &"cast",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s31cn")
+}],
+"loop": true,
+"name": &"dead_loop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ghrtj")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s31cn")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s31cn")
+}],
+"loop": true,
+"name": &"idle_loop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s31cn")
+}],
+"loop": true,
+"name": &"revive",
+"speed": 5.0
+}]
+
+[node name="PhrolovaVisuals" type="Node2D"]
+
+[node name="phrolova_battle_frames" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-3.999999, -142)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_y8jmh")
+animation = &"revive"
+autoplay = "idle_loop"
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -119.0
+offset_top = -293.0
+offset_right = 123.0
+offset_bottom = -13.0
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -165)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(20, -351)
+
+[node name="Visuals" type="Node2D" parent="."]
+unique_name_in_owner = true

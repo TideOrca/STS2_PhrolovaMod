@@ -1,0 +1,57 @@
+{
+  "DARV.talk.PHROLOVA-PHROLOVA.0-0.ancient": "啊，彼岸的指挥家！我收集了一些乐谱，你要看看吗？",
+  "DARV.talk.PHROLOVA-PHROLOVA.1-0r.ancient": "能让人复活的东西？如果涅奥办不到，那我就更不可能有了。",
+  "DARV.talk.PHROLOVA-PHROLOVA.2-0.ancient": "你小提琴的弦又断了？让我找找怎么修好它。",
+  "DARV.talk.PHROLOVA-PHROLOVA.2-0.next": "继续",
+  "DARV.talk.PHROLOVA-PHROLOVA.2-1.char": "[i][font_size=22]弗洛洛轻抚着小提琴，仿佛在拉响什么。[/font_size][/i]",
+  "DARV.talk.PHROLOVA-PHROLOVA.2-1.next": "继续",
+  "DARV.talk.PHROLOVA-PHROLOVA.2-2.ancient": "或许建筑师知道，怎么让他人复活。",
+
+  "NEOW.talk.PHROLOVA-PHROLOVA.0-0.ancient": "[sine]..听见了..你的..乐声..\n..从彼岸..归来..继续..指挥吧...[/sine]",
+  "NEOW.talk.PHROLOVA-PHROLOVA.1-0r.ancient": "[sine]..亡者的..旋律..你..还..记得..很清楚...[/sine]",
+  "NEOW.talk.PHROLOVA-PHROLOVA.2-0.ancient": "[sine]..你..第一次..来到..塔前..\n..也像..现在..这样..拉着..提琴...[/sine]",
+  "NEOW.talk.PHROLOVA-PHROLOVA.2-0.next": "继续",
+  "NEOW.talk.PHROLOVA-PHROLOVA.2-1.ancient": "[sine]..很抱歉..我..没办法..复活..塔外的人.....[/sine]",
+  "NEOW.talk.PHROLOVA-PHROLOVA.2-1.next": "继续",
+  "NEOW.talk.PHROLOVA-PHROLOVA.2-2.ancient": "[sine]..去吧..用你的..乐章..让..他们..安息...[/sine]",
+
+  "NONUPEIPE.talk.PHROLOVA-PHROLOVA.0-0.ancient": "彼岸的指挥家，你终于来了。\n让我的力量，也加入你的演奏吧。",
+  "NONUPEIPE.talk.PHROLOVA-PHROLOVA.1-0r.ancient": "你的神情永远那么忧郁。\n什么时候能看见你笑一下呢？",
+  "NONUPEIPE.talk.PHROLOVA-PHROLOVA.2-0.ancient": "很抱歉我无能为力，希望建筑师能给你答案。",
+
+  "OROBAS.talk.PHROLOVA-PHROLOVA.0-0.ancient": "你长得好漂亮，但为什么这么悲伤？",
+  "OROBAS.talk.PHROLOVA-PHROLOVA.1-0r.ancient": "复活家人？怪不得你一直不开心，虽然我做不到，但我会帮助你的。",
+  "OROBAS.talk.PHROLOVA-PHROLOVA.2-0.ancient": "你的小提琴拉的好好听。\n建筑师或许能帮你！",
+
+  "PAEL.talk.PHROLOVA-PHROLOVA.0-0.ancient": "[thinky_dots]带走我的一部分，虽然它不会让你睡得更香……[/thinky_dots]",
+  "PAEL.talk.PHROLOVA-PHROLOVA.1-0r.ancient": "[thinky_dots]不要再拉小提琴了。\n你又一次吵醒了我。[/thinky_dots]",
+  "PAEL.talk.PHROLOVA-PHROLOVA.2-0.ancient": "[thinky_dots]你所寻找的。\n父亲或许能帮你……[/thinky_dots]",
+
+  "TANX.talk.PHROLOVA-PHROLOVA.0-0.ancient": "[b]哈！这小提琴真漂亮！但你需要武器！[/b]",
+  "TANX.talk.PHROLOVA-PHROLOVA.1-0r.ancient": "[b]指挥家就该拿剑！来一把！我们来一场战斗的交响乐！[/b]",
+  "TANX.talk.PHROLOVA-PHROLOVA.2-0.ancient": "[b]弗洛洛，与我一战！！[/b]",
+  "TANX.talk.PHROLOVA-PHROLOVA.2-0.next": "战斗",
+  "TANX.talk.PHROLOVA-PHROLOVA.2-1.char": "[i][font_size=22]弗洛洛挥下指挥棒，赫卡忒率先发起了攻击。[/font_size][/i]",
+  "TANX.talk.PHROLOVA-PHROLOVA.2-1.next": "继续",
+  "TANX.talk.PHROLOVA-PHROLOVA.2-2.ancient": "[b]痛快！！这是你的战利品！[/b]",
+
+  "TEZCATARA.talk.PHROLOVA-PHROLOVA.0-0.ancient": "哎呀，你的[jitter][b]演奏[/b][/jitter]真是太棒了！快进来，快进来！",
+  "TEZCATARA.talk.PHROLOVA-PHROLOVA.1-0r.ancient": "多么优美的音乐！来，吃点点心。\n空着肚子可没法[jitter][b]演奏[/b][/jitter]！",
+  "TEZCATARA.talk.PHROLOVA-PHROLOVA.2-0.ancient": "哦哦，建筑师还活着吗？\n我会帮助你[jitter][b]见到[/b][/jitter]他！",
+
+  "VAKUU.talk.PHROLOVA-PHROLOVA.0-0.ancient": "真是意外，没想到我还能听见你的[sine]乐声[/sine]。",
+  "VAKUU.talk.PHROLOVA-PHROLOVA.0-0.next": "苏醒",
+  "VAKUU.talk.PHROLOVA-PHROLOVA.0-1.char": "[jitter][b]恶魔！[/b][/jitter]\n你这骗子！？",
+  "VAKUU.talk.PHROLOVA-PHROLOVA.0-1.next": "继续",
+  "VAKUU.talk.PHROLOVA-PHROLOVA.0-2.ancient": "我们是公平交易，不是吗？",
+  "VAKUU.talk.PHROLOVA-PHROLOVA.1-0r.ancient": "你的家人，你的朋友，再也回不来了，你就甘心吗？\n[i][font_size=22]瓦库愉悦地欣赏着你的沉默。[/font_size][/i]",
+  "VAKUU.talk.PHROLOVA-PHROLOVA.2-0.ancient": "我亲爱的指挥家，你为何还让建筑师活着？",
+  "VAKUU.talk.PHROLOVA-PHROLOVA.2-0.next": "苏醒",
+  "VAKUU.talk.PHROLOVA-PHROLOVA.2-1.char": "等我终结了建筑师，会亲手将你送回地狱！",
+  "VAKUU.talk.PHROLOVA-PHROLOVA.2-1.next": "继续",
+  "VAKUU.talk.PHROLOVA-PHROLOVA.2-2.ancient": "[i][font_size=22][sine]真是令人期待。[/sine][/font_size][/i]\n我等着看你如何再次堕入深渊。",
+  
+  "THE_ARCHITECT.talk.PHROLOVA-PHROLOVA.0-0r.ancient": "我知道你所寻何物，但你要自己来拿。",
+  "THE_ARCHITECT.talk.PHROLOVA-PHROLOVA.0-0r.next": "继续",
+  "THE_ARCHITECT.talk.PHROLOVA-PHROLOVA.0-1r.ancient": "回去吧。"
+}

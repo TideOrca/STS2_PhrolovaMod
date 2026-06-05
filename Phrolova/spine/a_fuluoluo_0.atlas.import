@@ -1,0 +1,16 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://c5yov2vylyqbn"
+path="res://.godot/imported/a_fuluoluo_0.atlas-c1907c085b838bd7fc32c52d7b95a6c7.spatlas"
+
+[deps]
+
+source_file="res://Phrolova/spine/a_fuluoluo_0.atlas"
+dest_files=["res://.godot/imported/a_fuluoluo_0.atlas-c1907c085b838bd7fc32c52d7b95a6c7.spatlas"]
+
+[params]
+
+normal_map_prefix="n"
+specular_map_prefix="s"
