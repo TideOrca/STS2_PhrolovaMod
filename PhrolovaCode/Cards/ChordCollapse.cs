@@ -24,9 +24,9 @@ namespace Phrolova.PhrolovaCode.Cards
             }
             else
             {
-                totalNotes = Owner.Creature.Powers.OfType<RedNotePower>().Count()
-                             + Owner.Creature.Powers.OfType<BlueNotePower>().Count()
-                             + Owner.Creature.Powers.OfType<ColorfulNotePower>().Count();
+                totalNotes = (int)Owner.Creature.Powers.OfType<RedNotePower>().Sum(p => p.Amount)
+                             + (int)Owner.Creature.Powers.OfType<BlueNotePower>().Sum(p => p.Amount)
+                             + (int)Owner.Creature.Powers.OfType<ColorfulNotePower>().Sum(p => p.Amount);
             }
 
             await DamageCmd.Attack(DynamicVars.Damage.BaseValue)

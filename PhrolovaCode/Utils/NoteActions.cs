@@ -5,7 +5,7 @@ namespace Phrolova.PhrolovaCode.Utils
 {
  public static class NoteActions
     {
-        public static async Task<bool> TryConsumeOneNote(TuningStatePower tuning) 
+        public static async Task<bool> TryConsumeOneNote(TuningStatePower tuning, PlayerChoiceContext? context = null)
         {
             if (tuning?.Owner == null || tuning.NoteOrder.Count == 0) return false;
             
@@ -56,28 +56,32 @@ namespace Phrolova.PhrolovaCode.Utils
             // 3. 没有任何有效的乐声可消耗
             if (targetIndex == -1) return false;
 
-            // 4. 移除对应的能力实例
+            // 4. 减1层对应能力（Counter模式），层数为0时自动移除
             tuning.NoteOrder.RemoveAt(targetIndex);
+            var ctx = context ?? new ThrowingPlayerChoiceContext();
             if (targetType == TuningStatePower.NoteType.Red)
             {
                 var p = owner.Powers.OfType<RedNotePower>().FirstOrDefault();
-                if (p != null) await PowerCmd.Remove(p);
+                if (p != null && p.Amount > 0)
+                    await PowerCmd.ModifyAmount(ctx, p, -1, owner, null, false);
             }
             else if (targetType == TuningStatePower.NoteType.Blue)
             {
                 var p = owner.Powers.OfType<BlueNotePower>().FirstOrDefault();
-                if (p != null) await PowerCmd.Remove(p);
+                if (p != null && p.Amount > 0)
+                    await PowerCmd.ModifyAmount(ctx, p, -1, owner, null, false);
             }
             else if (targetType == TuningStatePower.NoteType.Colorful)
             {
                 var p = owner.Powers.OfType<ColorfulNotePower>().FirstOrDefault();
-                if (p != null) await PowerCmd.Remove(p);
+                if (p != null && p.Amount > 0)
+                    await PowerCmd.ModifyAmount(ctx, p, -1, owner, null, false);
             }
             return true;
 }
 
         // 将最早的一个非彩乐转换为彩乐
-        public static async Task ConvertToColorful(TuningStatePower tuning)
+        public static async Task ConvertToColorful(TuningStatePower tuning, PlayerChoiceContext? context = null)
         {
             if (tuning?.Owner == null) return;
             var owner = tuning.Owner;
@@ -96,41 +100,49 @@ namespace Phrolova.PhrolovaCode.Utils
             }
             if (targetIndex == -1) return;
 
+            var ctx2 = context ?? new ThrowingPlayerChoiceContext();
             if (targetType == TuningStatePower.NoteType.Red)
             {
                 var p = owner.Powers.OfType<RedNotePower>().FirstOrDefault();
-                if (p != null) await PowerCmd.Remove(p);
+                if (p != null && p.Amount > 0)
+                    await PowerCmd.ModifyAmount(ctx2, p, -1, owner, null, false);
             }
             else if (targetType == TuningStatePower.NoteType.Blue)
             {
                 var p = owner.Powers.OfType<BlueNotePower>().FirstOrDefault();
-                if (p != null) await PowerCmd.Remove(p);
+                if (p != null && p.Amount > 0)
+                    await PowerCmd.ModifyAmount(ctx2, p, -1, owner, null, false);
             }
 
             list.RemoveAt(targetIndex);
             list.Add(TuningStatePower.NoteType.Colorful);
-            await PowerCmd.Apply<ColorfulNotePower>(new ThrowingPlayerChoiceContext(), new[] { owner }, 1, owner, null, false);
+            await PowerCmd.Apply<ColorfulNotePower>(ctx2, new[] { owner }, 1, owner, null, false);
         }
 
         // 将所有非彩乐转换为彩乐
-        public static async Task ConvertAllToColorful(TuningStatePower tuning)
+        public static async Task ConvertAllToColorful(TuningStatePower tuning, PlayerChoiceContext? context = null)
         {
             if (tuning?.Owner == null) return;
             var owner = tuning.Owner;
             var list = tuning.NoteOrder;
 
-            int redCount = owner.Powers.OfType<RedNotePower>().Count();
-            int blueCount = owner.Powers.OfType<BlueNotePower>().Count();
+            var redPower = owner.Powers.OfType<RedNotePower>().FirstOrDefault();
+            var bluePower = owner.Powers.OfType<BlueNotePower>().FirstOrDefault();
+            int redCount = (int)(redPower?.Amount ?? 0);
+            int blueCount = (int)(bluePower?.Amount ?? 0);
             int totalConverted = redCount + blueCount;
             if (totalConverted == 0) return;
 
-            foreach (var p in owner.Powers.OfType<RedNotePower>().ToList()) await PowerCmd.Remove(p);
-            foreach (var p in owner.Powers.OfType<BlueNotePower>().ToList()) await PowerCmd.Remove(p);
+            var ctx3 = context ?? new ThrowingPlayerChoiceContext();
+            if (redPower != null && redCount > 0)
+                await PowerCmd.ModifyAmount(ctx3, redPower, -redCount, owner, null, false);
+            if (bluePower != null && blueCount > 0)
+                await PowerCmd.ModifyAmount(ctx3, bluePower, -blueCount, owner, null, false);
             list.RemoveAll(n => n != TuningStatePower.NoteType.Colorful);
 
             for (int i = 0; i < totalConverted; i++)
             {
-                await PowerCmd.Apply<ColorfulNotePower>(new ThrowingPlayerChoiceContext(), new[] { owner }, 1, owner, null, false);
+                await PowerCmd.Apply<ColorfulNotePower>(ctx3, new[] { owner }, 1, owner, null, false);
                 list.Add(TuningStatePower.NoteType.Colorful);
             }
         }

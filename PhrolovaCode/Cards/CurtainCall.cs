@@ -62,9 +62,12 @@ namespace Phrolova.PhrolovaCode.Cards
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
             
-            foreach (var p in Owner.Creature.Powers.OfType<RedNotePower>().ToList()) await PowerCmd.Remove(p);
-            foreach (var p in Owner.Creature.Powers.OfType<BlueNotePower>().ToList()) await PowerCmd.Remove(p);
-            foreach (var p in Owner.Creature.Powers.OfType<ColorfulNotePower>().ToList()) await PowerCmd.Remove(p);
+            var _rPwr = Owner.Creature.Powers.OfType<RedNotePower>().FirstOrDefault();
+            if (_rPwr != null && _rPwr.Amount > 0) await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), _rPwr, -(int)_rPwr.Amount, Owner.Creature, null, false);
+            var _bPwr = Owner.Creature.Powers.OfType<BlueNotePower>().FirstOrDefault();
+            if (_bPwr != null && _bPwr.Amount > 0) await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), _bPwr, -(int)_bPwr.Amount, Owner.Creature, null, false);
+            var _cPwr = Owner.Creature.Powers.OfType<ColorfulNotePower>().FirstOrDefault();
+            if (_cPwr != null && _cPwr.Amount > 0) await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), _cPwr, -(int)_cPwr.Amount, Owner.Creature, null, false);
 
             // 移除演奏，进入定音
             await PowerCmd.Remove(performing);

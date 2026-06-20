@@ -30,7 +30,7 @@ namespace Phrolova.PhrolovaCode.Cards
             var tuning = Owner.Creature.Powers.OfType<TuningStatePower>().FirstOrDefault();
             if (tuning != null)
             {
-                await NoteActions.ConvertAllToColorful(tuning);
+                await NoteActions.ConvertAllToColorful(tuning, choiceContext);
             }
         }
 

@@ -151,9 +151,12 @@ namespace Phrolova.PhrolovaCode.Powers
             if (player.Creature != Owner) return;
 
             // 清空所有乐声
-            foreach (var p in Owner.Powers.OfType<RedNotePower>().ToList()) await PowerCmd.Remove(p);
-            foreach (var p in Owner.Powers.OfType<BlueNotePower>().ToList()) await PowerCmd.Remove(p);
-            foreach (var p in Owner.Powers.OfType<ColorfulNotePower>().ToList()) await PowerCmd.Remove(p);
+            var _rPwr = Owner.Powers.OfType<RedNotePower>().FirstOrDefault();
+            if (_rPwr != null && _rPwr.Amount > 0) await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), _rPwr, -(int)_rPwr.Amount, Owner, null, false);
+            var _bPwr = Owner.Powers.OfType<BlueNotePower>().FirstOrDefault();
+            if (_bPwr != null && _bPwr.Amount > 0) await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), _bPwr, -(int)_bPwr.Amount, Owner, null, false);
+            var _cPwr = Owner.Powers.OfType<ColorfulNotePower>().FirstOrDefault();
+            if (_cPwr != null && _cPwr.Amount > 0) await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), _cPwr, -(int)_cPwr.Amount, Owner, null, false);
             // 移除演奏重放能力
             foreach (var p in Owner.Powers.OfType<PerformEchoPower>().ToList())
                 await PowerCmd.Remove(p);

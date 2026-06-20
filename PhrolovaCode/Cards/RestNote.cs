@@ -13,7 +13,7 @@ namespace Phrolova.PhrolovaCode.Cards
             get
             {
                 if (Owner == null) return false;
-                int colorful = Owner.Creature.Powers.OfType<ColorfulNotePower>().Count();
+                int colorful = (int)Owner.Creature.Powers.OfType<ColorfulNotePower>().Sum(p => p.Amount);
                 return colorful > 4;
             }
         }

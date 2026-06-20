@@ -45,9 +45,9 @@ namespace Phrolova.PhrolovaCode.Cards
             var tuning = Owner.Creature.Powers.OfType<TuningStatePower>().FirstOrDefault();
             if (tuning != null)
             {
-                red = Owner.Creature.Powers.OfType<RedNotePower>().Count();
-                blue = Owner.Creature.Powers.OfType<BlueNotePower>().Count();
-                colorful = Owner.Creature.Powers.OfType<ColorfulNotePower>().Count();
+                red = (int)Owner.Creature.Powers.OfType<RedNotePower>().Sum(p => p.Amount);
+                blue = (int)Owner.Creature.Powers.OfType<BlueNotePower>().Sum(p => p.Amount);
+                colorful = (int)Owner.Creature.Powers.OfType<ColorfulNotePower>().Sum(p => p.Amount);
 
                 await PowerCmd.Remove(tuning);
                 //foreach (var p in Owner.Creature.Powers.OfType<RedNotePower>().ToList()) await PowerCmd.Remove(p);

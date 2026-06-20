@@ -23,10 +23,7 @@ namespace Phrolova.PhrolovaCode.Powers
         // 公共属性：允许辅助类访问顺序列表
         internal List<NoteType> NoteOrder => _noteOrder;
 
-        /// <summary>
-        /// 由卡牌或遗物直接添加乐声。
-        /// context 参数可选，当不为 null 时用于联机安全操作。
-        /// </summary>
+       
         public async Task ForceAddNote(NoteType type, int count = 1, PlayerChoiceContext? context = null)
         {
             for (int i = 0; i < count; i++)
@@ -61,6 +58,8 @@ namespace Phrolova.PhrolovaCode.Powers
         private async Task AddNoteInternal(NoteType type, PlayerChoiceContext? context = null)
         {
             int total = GetCurrentTotal();
+            var ctx = context ?? new ThrowingPlayerChoiceContext();
+
             // 乐声数量达到上限时，替换最早的非彩乐
             if (total >= 6)
             {
@@ -80,31 +79,32 @@ namespace Phrolova.PhrolovaCode.Powers
                 _noteOrder.RemoveAt(indexToRemove.Value);
                 if (firstNonColorful.Value == NoteType.Red)
                 {
-                    var toRemove = Owner.Powers.OfType<RedNotePower>().FirstOrDefault();
-                    if (toRemove != null) await PowerCmd.Remove(toRemove);
+                    var toModify = Owner.Powers.OfType<RedNotePower>().FirstOrDefault();
+                    if (toModify != null && toModify.Amount > 0)
+                        await PowerCmd.ModifyAmount(ctx, toModify, -1, Owner, null, false);
                 }
                 else if (firstNonColorful.Value == NoteType.Blue)
                 {
-                    var toRemove = Owner.Powers.OfType<BlueNotePower>().FirstOrDefault();
-                    if (toRemove != null) await PowerCmd.Remove(toRemove);
+                    var toModify = Owner.Powers.OfType<BlueNotePower>().FirstOrDefault();
+                    if (toModify != null && toModify.Amount > 0)
+                        await PowerCmd.ModifyAmount(ctx, toModify, -1, Owner, null, false);
                 }
             }
 
             _noteOrder.Add(type);
             switch (type)
             {
-                case NoteType.Red: await PowerCmd.Apply<RedNotePower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, 1, Owner, null, false); break;
-                case NoteType.Blue: await PowerCmd.Apply<BlueNotePower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, 1, Owner, null, false); break;
-                case NoteType.Colorful: await PowerCmd.Apply<ColorfulNotePower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, 1, Owner, null, false); break;
+                case NoteType.Red: await PowerCmd.Apply<RedNotePower>(ctx, new[] { Owner }, 1, Owner, null, false); break;
+                case NoteType.Blue: await PowerCmd.Apply<BlueNotePower>(ctx, new[] { Owner }, 1, Owner, null, false); break;
+                case NoteType.Colorful: await PowerCmd.Apply<ColorfulNotePower>(ctx, new[] { Owner }, 1, Owner, null, false); break;
             }
 
-            // 火炬抽牌效果（联机安全，若没有上下文则使用 ThrowingContext 作为后备）
+            // 火炬抽牌效果
             var torchPowers = Owner.Powers.OfType<TorchPower>();
             int totalDraws = torchPowers.Sum(p => p.Amount);
             if (totalDraws > 0 && Owner.Player != null)
             {
-                PlayerChoiceContext drawContext = context ?? new ThrowingPlayerChoiceContext();
-                await CardPileCmd.Draw(drawContext, totalDraws, Owner.Player);
+                await CardPileCmd.Draw(ctx, totalDraws, Owner.Player);
             }
 
             // 触发事件供非关键功能（如音效）使用
@@ -114,9 +114,9 @@ namespace Phrolova.PhrolovaCode.Powers
         internal int GetCurrentTotal()
         {
             if (Owner == null) return 0;
-            int red = Owner.Powers.OfType<RedNotePower>().Count();
-            int blue = Owner.Powers.OfType<BlueNotePower>().Count();
-            int colorful = Owner.Powers.OfType<ColorfulNotePower>().Count();
+            int red = (int)Owner.Powers.OfType<RedNotePower>().Sum(p => p.Amount);
+            int blue = (int)Owner.Powers.OfType<BlueNotePower>().Sum(p => p.Amount);
+            int colorful = (int)Owner.Powers.OfType<ColorfulNotePower>().Sum(p => p.Amount);
             return red + blue + colorful;
         }
 

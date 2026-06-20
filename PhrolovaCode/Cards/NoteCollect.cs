@@ -19,7 +19,7 @@ namespace Phrolova.PhrolovaCode.Cards
             var tuning = Owner.Creature.Powers.OfType<TuningStatePower>().FirstOrDefault();
             if (tuning == null) return;
 
-            if (await NoteActions.TryConsumeOneNote(tuning))
+            if (await NoteActions.TryConsumeOneNote(tuning, choiceContext))
             {
                 await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
             }
