@@ -17,7 +17,7 @@ namespace Phrolova.PhrolovaCode.Cards
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
             int stacks = (int)DynamicVars["Enhance"].BaseValue;
-            await PowerCmd.Apply<HecateEnhancePower>(Owner.Creature, stacks, Owner.Creature, this);
+            await PowerCmd.Apply<HecateEnhancePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, stacks, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

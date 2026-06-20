@@ -15,10 +15,10 @@ namespace Phrolova.PhrolovaCode.Cards
         {
             // 获得重世
             int stacks = (int)DynamicVars["RebirthStacks"].BaseValue;
-            await PowerCmd.Apply<RebirthPower>(Owner.Creature, stacks, Owner.Creature, this);
+            await PowerCmd.Apply<RebirthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, stacks, Owner.Creature, this, false);
 
             // 保留手牌（借鉴 Equilibrium）
-            await PowerCmd.Apply<RetainHandPower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<RetainHandPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

@@ -22,7 +22,7 @@ namespace Phrolova.PhrolovaCode.Cards
 
             int multiplier = IsUpgraded ? 3 : 2;
             int increase = dream.Amount * (multiplier - 1);
-            await PowerCmd.ModifyAmount(dream, increase, Owner.Creature, this);
+            await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), dream, increase, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade() { }

@@ -14,9 +14,9 @@ namespace Phrolova.PhrolovaCode.Cards
 
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
-            await PowerCmd.Apply<WeakPower>(Owner.Creature, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this, false);
             int resonanceStacks = (int)DynamicVars["Resonance"].BaseValue;
-            await PowerCmd.Apply<ResonancePower>(Owner.Creature, resonanceStacks, Owner.Creature, this);
+            await PowerCmd.Apply<ResonancePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, resonanceStacks, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

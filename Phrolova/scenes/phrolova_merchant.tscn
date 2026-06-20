@@ -1,21 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://ce75nm04ke2y0"]
+[gd_scene load_steps=2 format=3 uid="uid://ce75nm04ke2y0"]
 
-[ext_resource type="Texture2D" uid="uid://cdildyrpog02n" path="res://Phrolova/images/characters/merchant_phrolova.png" id="1_hcvby"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hcvby"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_hcvby")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://chl4ocpvj4yk3" path="res://Phrolova/spine/a_fuluoluo_0_skel_data.tres" id="1_skel_data"]
 
 [node name="PhrolovaMerchant" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -249)
-scale = Vector2(0.3, 0.3)
-sprite_frames = SubResource("SpriteFrames_hcvby")
+[node name="SpineSprite" type="SpineSprite" parent="."]
+skeleton_data_res = ExtResource("1_skel_data")
+preview_skin = "Default"
+scale = Vector2(0.47, 0.47)

@@ -1,17 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci4gpwofmxu32"]
+[gd_scene load_steps=2 format=3 uid="uid://ci4gpwofmxu32"]
 
-[ext_resource type="SpineAtlasResource" uid="uid://c5yov2vylyqbn" path="res://Phrolova/spine/a_fuluoluo_0.atlas" id="1_cyxmd"]
-[ext_resource type="SpineSkeletonFileResource" uid="uid://br6kc1c8o22sx" path="res://Phrolova/spine/a_fuluoluo_0.skel" id="2_3pj4r"]
+[ext_resource type="SpineSkeletonDataResource" uid="uid://chl4ocpvj4yk3" path="res://Phrolova/spine/a_fuluoluo_0_skel_data.tres" id="1_skel_data"]
 
-[sub_resource type="SpineSkeletonDataResource" id="SpineSkeletonDataResource_ib4up"]
-atlas_res = ExtResource("1_cyxmd")
-skeleton_file_res = ExtResource("2_3pj4r")
+[node name="Phrolova" type="Node2D"]
+metadata/_edit_group_ = true
 
-[node name="PhrolovaSpine" type="Node2D"]
-
-[node name="PhrolovaSpine" type="SpineSprite" parent="."]
-skeleton_data_res = SubResource("SpineSkeletonDataResource_ib4up")
+[node name="Visuals" type="SpineSprite" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.32, 0.32)
+skeleton_data_res = ExtResource("1_skel_data")
 preview_skin = "Default"
-preview_animation = "skill"
+preview_animation = "fail"
 preview_frame = false
 preview_time = 0.0
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -121.0
+offset_top = -280.0
+offset_right = 121.0
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -165)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(20, -351)

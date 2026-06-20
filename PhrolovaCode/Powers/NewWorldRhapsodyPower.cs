@@ -5,7 +5,6 @@ namespace Phrolova.PhrolovaCode.Powers
     {
         public override PowerType Type => PowerType.Buff;
         public override PowerStackType StackType => PowerStackType.Single;
-        public override bool IsInstanced => false;
 
         private int _rebirthCount;
         public override int DisplayAmount => 3 - _rebirthCount % 3;

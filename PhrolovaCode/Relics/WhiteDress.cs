@@ -11,7 +11,7 @@ namespace Phrolova.PhrolovaCode.Relics
         public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
         {
             if (player != Owner) return;
-            await PowerCmd.Apply<ResonancePower>(Owner.Creature, 4, Owner.Creature, null);
+            await PowerCmd.Apply<ResonancePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 4, Owner.Creature, null, false);
         }
     }
 }

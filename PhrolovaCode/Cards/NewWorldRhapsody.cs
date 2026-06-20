@@ -11,7 +11,7 @@ namespace Phrolova.PhrolovaCode.Cards
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
             // 每次打出都施加一个新实例
-            await PowerCmd.Apply<NewWorldRhapsodyPower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<NewWorldRhapsodyPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

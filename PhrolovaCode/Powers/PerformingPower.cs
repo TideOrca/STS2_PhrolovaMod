@@ -9,7 +9,6 @@ namespace Phrolova.PhrolovaCode.Powers
     {
         public override PowerType Type => PowerType.Buff;
         public override PowerStackType StackType => PowerStackType.Single;
-        public override bool IsInstanced => false;
 
         // 累计伤害（公开属性，供谢幕读取）
         public decimal TotalDamageDealt { get; set; }
@@ -43,17 +42,17 @@ namespace Phrolova.PhrolovaCode.Powers
 
             // 施加临时力量和敏捷（回合结束自动移除）
             if (strengthBonus > 0)
-                await PowerCmd.Apply<PerformStrengthPower>(Owner, strengthBonus, Owner, null);
+                await PowerCmd.Apply<PerformStrengthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, strengthBonus, Owner, null, false);
             if (dexterityBonus > 0)
-                await PowerCmd.Apply<PerformDexterityPower>(Owner, dexterityBonus, Owner, null);
+                await PowerCmd.Apply<PerformDexterityPower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, dexterityBonus, Owner, null, false);
 
             if (colorful > 0 && Owner.CombatState != null)
             {
                 var enemies = Owner.CombatState.GetOpponentsOf(Owner).ToList(); // ← 拷贝副本
                 foreach (var enemy in enemies)
                 {
-                    await PowerCmd.Apply<VulnerablePower>(enemy, colorful, Owner, null);
-                    await PowerCmd.Apply<WeakPower>(enemy, colorful, Owner, null);
+                    await PowerCmd.Apply<VulnerablePower>(new ThrowingPlayerChoiceContext(), new[] { enemy }, colorful, Owner, null, false);
+                    await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { enemy }, colorful, Owner, null, false);
                 }
             }
 
@@ -61,7 +60,7 @@ namespace Phrolova.PhrolovaCode.Powers
             var redBlack = Owner.Powers.OfType<RedBlackSongPower>().FirstOrDefault();
             if (redBlack != null && redBlack.Amount > 0)
             {
-                await PowerCmd.Apply<PerformEchoPower>(Owner, redBlack.Amount, Owner, null);
+                await PowerCmd.Apply<PerformEchoPower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, redBlack.Amount, Owner, null, false);
             }
             
             // 引爆所有敌人身上的迷梦
@@ -93,7 +92,7 @@ namespace Phrolova.PhrolovaCode.Powers
             
             // 遗物：撕碎的乐谱
             if (Owner?.Player?.Relics.OfType<TornScore>().Any() == true)
-                await PowerCmd.Apply<ResonancePower>(Owner, 5, Owner, null);
+                await PowerCmd.Apply<ResonancePower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, 5, Owner, null, false);
         }
 
         //public override decimal ModifyDamageMultiplicative(Creature target, decimal amount, ValueProp props, Creature dealer, CardModel cardSource)
@@ -122,7 +121,7 @@ namespace Phrolova.PhrolovaCode.Powers
             }
 
             // 叠加余响
-            await PowerCmd.Apply<ResonancePower>(Owner, 1, Owner, null);
+            await PowerCmd.Apply<ResonancePower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, 1, Owner, null, false);
 
             // 赫卡忒协战：基础1次 + 额外协战能力层数
             int extraAttacks = Owner.Powers.OfType<HecateExtraAttackPower>().Sum(p => p.Amount);
@@ -160,7 +159,7 @@ namespace Phrolova.PhrolovaCode.Powers
                 await PowerCmd.Remove(p);
             
             await PowerCmd.Remove(this);
-            await PowerCmd.Apply<TuningStatePower>(Owner, 1, Owner, null);
+            await PowerCmd.Apply<TuningStatePower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, 1, Owner, null, false);
         }
     }
 }

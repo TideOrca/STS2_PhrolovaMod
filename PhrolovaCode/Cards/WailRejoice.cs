@@ -18,7 +18,7 @@ namespace Phrolova.PhrolovaCode.Cards
             {
                 if (power.Amount > 0)
                 {
-                    await PowerCmd.ModifyAmount(power, power.Amount, Owner.Creature, this);
+                    await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), power, power.Amount, Owner.Creature, this, false);
                 }
             }
         }

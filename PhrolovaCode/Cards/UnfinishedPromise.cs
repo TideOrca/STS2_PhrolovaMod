@@ -16,7 +16,7 @@ namespace Phrolova.PhrolovaCode.Cards
 
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
-            await PowerCmd.Apply<UnfinishedPromisePower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<UnfinishedPromisePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

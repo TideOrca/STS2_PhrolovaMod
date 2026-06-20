@@ -5,7 +5,6 @@ namespace Phrolova.PhrolovaCode.Powers
     {
         public override PowerType Type => PowerType.Buff;
         public override PowerStackType StackType => PowerStackType.Counter;
-        public override bool IsInstanced => false;
 
         public override async Task AfterDamageGiven(PlayerChoiceContext choiceContext, Creature dealer, DamageResult result, ValueProp props, Creature target, CardModel cardSource)
         {
@@ -13,7 +12,7 @@ namespace Phrolova.PhrolovaCode.Powers
                 return;
 
             // 赫卡忒造成伤害时，给予目标虚弱（层数 = 本能力层数，每层1虚弱）
-            await PowerCmd.Apply<WeakPower>(target, Amount, dealer, cardSource);
+            await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { target }, Amount, dealer, cardSource, false);
         }
     }
 }

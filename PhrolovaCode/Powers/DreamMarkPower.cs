@@ -8,7 +8,6 @@ namespace Phrolova.PhrolovaCode.Powers
     {
         public override PowerType Type => PowerType.Debuff;
         public override PowerStackType StackType => PowerStackType.Counter;
-        public override bool IsInstanced => false;
 
         private bool _overHpStunApplied; // 用于瞬时眩晕标记
 
@@ -27,7 +26,7 @@ namespace Phrolova.PhrolovaCode.Powers
         }
 
         // 层数变化时：削减力量 + 检查是否首次超过生命值（立即眩晕）
-        public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+        public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
         {
             if (power != this || Owner == null || Owner.IsDead) return;
 
@@ -43,7 +42,7 @@ namespace Phrolova.PhrolovaCode.Powers
 
                 if (thresholdsPassed > 0)
                 {
-                    await PowerCmd.Apply<StrengthPower>(Owner, -thresholdsPassed, Owner, null);
+                    await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, -thresholdsPassed, Owner, null, false);
                 }
             }
 

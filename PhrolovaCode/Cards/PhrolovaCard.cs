@@ -58,7 +58,7 @@ namespace Phrolova.PhrolovaCode.Cards
             if (rebirth == null || rebirth.Amount <= 0) return false;
 
             // 正常消耗一层重世
-            await PowerCmd.ModifyAmount(rebirth, -1, Owner.Creature, null);
+            await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), rebirth, -1, Owner.Creature, null, false);
 
             // ★ 同步处理新世界舞曲
             var rhapsody = Owner.Creature.Powers.OfType<NewWorldRhapsodyPower>().FirstOrDefault();

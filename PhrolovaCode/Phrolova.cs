@@ -1,5 +1,7 @@
 #nullable enable
 
+using MegaCrit.Sts2.Core.Animation;
+using MegaCrit.Sts2.Core.Bindings.MegaSpine;
 using Phrolova.PhrolovaCode.Cards;
 using Phrolova.PhrolovaCode.Pools;
 using Phrolova.PhrolovaCode.Relics;
@@ -8,8 +10,6 @@ namespace Phrolova
 {
     public sealed class Phrolova : PlaceholderCharacterModel
     {
-        public override string PlaceholderID => "necrobinder";
-        
         public override string CustomIconTexturePath =>
             "res://Phrolova/images/characters/icon_phrolova.png";
         public override string CustomIconOutlineTexturePath =>
@@ -36,7 +36,7 @@ namespace Phrolova
         
         // 战斗场景路径
         public override string CustomVisualPath =>
-            "res://Phrolova/scenes/phrolova_battle.tscn";
+            "res://Phrolova/scenes/phrolova_spine.tscn";
         // 火堆休息场景
         public override string CustomRestSiteAnimPath =>
             "res://Phrolova/scenes/phrolova_rest_site.tscn"; 
@@ -49,7 +49,7 @@ namespace Phrolova
         
         // 基础属性
         public override CharacterGender Gender => CharacterGender.Feminine;
-        public override Color NameColor => new Color("#7A2F8F");
+        public override Color NameColor => new Color("#BB0000");
         public override int StartingHp => 70;
         public override int StartingGold => 99;
 
@@ -80,6 +80,30 @@ namespace Phrolova
 
         public override float AttackAnimDelay => 0.15f;
         public override float CastAnimDelay => 0.25f;
+
+        // 自定义动画映射：将引擎事件绑定到 Spine 骨骼中的实际动画名
+        // 如果此处编译报错 "no suitable method found to override"，
+        public override CreatureAnimator SetupCustomAnimationStates(MegaSprite controller)
+        {
+            AnimState idle = new AnimState("idle", true);
+            AnimState cast = new AnimState("fail", false);
+            AnimState attack = new AnimState("skill", false);
+            AnimState hurt = new AnimState("success", false);
+            AnimState die = new AnimState("success", false);
+            AnimState deadLoop = new AnimState("success_loop", true);
+
+            idle.AddBranch("Hit", hurt, null);
+            cast.NextState = idle; cast.AddBranch("Hit", hurt, null);
+            attack.NextState = idle; attack.AddBranch("Hit", hurt, null);
+            hurt.NextState = idle; hurt.AddBranch("Hit", hurt, null);
+            die.NextState = deadLoop;
+
+            CreatureAnimator animator = new CreatureAnimator(idle, controller);
+            animator.AddAnyState("Attack", attack, null);
+            animator.AddAnyState("Cast", cast, null);
+            animator.AddAnyState("Dead", die, null);
+            return animator;
+        }
 
         // 音效
         public override string CharacterSelectSfx => string.Empty;

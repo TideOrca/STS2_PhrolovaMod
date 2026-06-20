@@ -52,7 +52,7 @@ namespace Phrolova.PhrolovaCode.Cards
                     await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
                     break;
                 case CardType.Curse:
-                    await PowerCmd.Apply<RebirthPower>(Owner.Creature, 1, Owner.Creature, this);
+                    await PowerCmd.Apply<RebirthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
                     break;
             }
         }

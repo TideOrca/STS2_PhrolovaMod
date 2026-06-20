@@ -4,7 +4,6 @@ namespace Phrolova.PhrolovaCode.Powers
     {
         public override PowerType Type => PowerType.Buff;
         public override PowerStackType StackType => PowerStackType.Counter; // 改为可叠加
-        public override bool IsInstanced => false;
 
         // 只要有该能力，所有重世牌耗能变为0
         public override bool TryModifyEnergyCostInCombat(CardModel card, decimal originalCost, out decimal modifiedCost)

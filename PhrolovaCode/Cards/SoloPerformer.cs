@@ -26,7 +26,7 @@ namespace Phrolova.PhrolovaCode.Cards
         {
             // 基础效果：获得格挡，给予虚弱
             await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
-            await PowerCmd.Apply<WeakPower>(cardPlay.Target, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { cardPlay.Target }, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this, false);
 
             // 重世效果：抽2张牌
             if (await TryConsumeRebirth())

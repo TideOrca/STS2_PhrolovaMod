@@ -20,14 +20,16 @@ namespace Phrolova.PhrolovaCode.Relics
             _playedCount = 0;
             InvokeDisplayAmountChanged();
 
-            var tuning = await PowerCmd.Apply<TuningStatePower>(Owner.Creature, 1, Owner.Creature, null);
-            await tuning.ForceAddNote(TuningStatePower.NoteType.Colorful, 1);
+            var tuningList = await PowerCmd.Apply<TuningStatePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, null, false);
+            var tuning = tuningList?.FirstOrDefault();
+            if (tuning != null)
+                await tuning.ForceAddNote(TuningStatePower.NoteType.Colorful, 1);
 
             await PlayerCmd.AddPet<Hecate>(Owner);
-            await PowerCmd.Apply<WeakPower>(Owner.Creature, 3, Owner.Creature, null);
+            await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 3, Owner.Creature, null, false);
         }
 
-        public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+        public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
         {
             if (power is TuningStatePower && power.Owner == Owner.Creature)
             {

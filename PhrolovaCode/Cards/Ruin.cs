@@ -27,7 +27,7 @@ namespace Phrolova.PhrolovaCode.Cards
 
             // 获得 X 层余响
             if (x > 0)
-                await PowerCmd.Apply<ResonancePower>(Owner.Creature, x, Owner.Creature, this);
+                await PowerCmd.Apply<ResonancePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, x, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

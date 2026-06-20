@@ -109,7 +109,7 @@ namespace Phrolova.PhrolovaCode.Utils
 
             list.RemoveAt(targetIndex);
             list.Add(TuningStatePower.NoteType.Colorful);
-            await PowerCmd.Apply<ColorfulNotePower>(owner, 1, owner, null);
+            await PowerCmd.Apply<ColorfulNotePower>(new ThrowingPlayerChoiceContext(), new[] { owner }, 1, owner, null, false);
         }
 
         // 将所有非彩乐转换为彩乐
@@ -130,7 +130,7 @@ namespace Phrolova.PhrolovaCode.Utils
 
             for (int i = 0; i < totalConverted; i++)
             {
-                await PowerCmd.Apply<ColorfulNotePower>(owner, 1, owner, null);
+                await PowerCmd.Apply<ColorfulNotePower>(new ThrowingPlayerChoiceContext(), new[] { owner }, 1, owner, null, false);
                 list.Add(TuningStatePower.NoteType.Colorful);
             }
         }

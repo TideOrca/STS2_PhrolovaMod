@@ -7,7 +7,6 @@ namespace Phrolova.Powers
     {
         public override PowerType Type => PowerType.Buff;
         public override PowerStackType StackType => PowerStackType.Counter;
-        public override bool IsInstanced => false;
         public override bool AllowNegative => false;
 
         public override decimal ModifyDamageMultiplicative(Creature target, decimal amount, ValueProp props, Creature dealer, CardModel cardSource)

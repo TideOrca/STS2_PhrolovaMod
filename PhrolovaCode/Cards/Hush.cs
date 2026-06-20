@@ -62,11 +62,11 @@ namespace Phrolova.PhrolovaCode.Cards
                 var hush = Owner.Creature.Powers.OfType<HushPower>().FirstOrDefault();
                 if (hush == null)
                 {
-                    await PowerCmd.Apply<HushPower>(Owner.Creature, 2, Owner.Creature, this);
+                    await PowerCmd.Apply<HushPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 2, Owner.Creature, this, false);
                 }
                 else
                 {
-                    await PowerCmd.ModifyAmount(hush, hush.Amount, Owner.Creature, this);
+                    await PowerCmd.ModifyAmount(new ThrowingPlayerChoiceContext(), hush, hush.Amount, Owner.Creature, this, false);
                 }
             }
         }

@@ -68,7 +68,7 @@ namespace Phrolova.PhrolovaCode.Cards
 
             // 移除演奏，进入定音
             await PowerCmd.Remove(performing);
-            await PowerCmd.Apply<TuningStatePower>(Owner.Creature, 1, Owner.Creature, null);
+            await PowerCmd.Apply<TuningStatePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, null, false);
         }
         protected override void OnUpgrade()
         {

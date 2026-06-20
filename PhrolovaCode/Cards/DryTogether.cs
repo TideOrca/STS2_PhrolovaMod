@@ -16,7 +16,7 @@ namespace Phrolova.PhrolovaCode.Cards
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
             // 给自己施加虚弱
-            await PowerCmd.Apply<WeakPower>(Owner.Creature, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this, false);
 
             // 给所有敌人施加等量虚弱
             var combatState = Owner?.Creature?.CombatState;
@@ -24,7 +24,7 @@ namespace Phrolova.PhrolovaCode.Cards
             {
                 foreach (var enemy in combatState.GetOpponentsOf(Owner.Creature))
                 {
-                    await PowerCmd.Apply<WeakPower>(enemy, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this);
+                    await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { enemy }, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this, false);
                 }
             }
         }

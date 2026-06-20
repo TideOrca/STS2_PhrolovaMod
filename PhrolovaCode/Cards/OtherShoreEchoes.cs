@@ -29,12 +29,12 @@ namespace Phrolova.PhrolovaCode.Cards
                 var enemies = combatState.GetOpponentsOf(Owner.Creature);
                 foreach (var enemy in enemies)
                 {
-                    await PowerCmd.Apply<VulnerablePower>(enemy, DynamicVars["VulnerablePower"].BaseValue, Owner.Creature, this);
+                    await PowerCmd.Apply<VulnerablePower>(new ThrowingPlayerChoiceContext(), new[] { enemy }, DynamicVars["VulnerablePower"].BaseValue, Owner.Creature, this, false);
                 }
             }
             // 获得多层重世
             int rebirthStacks = (int)DynamicVars["RebirthStacks"].BaseValue;
-            await PowerCmd.Apply<RebirthPower>(Owner.Creature, rebirthStacks, Owner.Creature, this);
+            await PowerCmd.Apply<RebirthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, rebirthStacks, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

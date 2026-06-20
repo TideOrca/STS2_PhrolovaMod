@@ -15,10 +15,10 @@ namespace Phrolova.PhrolovaCode.Cards
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
             // 下回合获得能量（官方能力）
-            await PowerCmd.Apply<EnergyNextTurnPower>(Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<EnergyNextTurnPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, DynamicVars.Energy.BaseValue, Owner.Creature, this, false);
 
             // 给自己1层虚弱
-            await PowerCmd.Apply<WeakPower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

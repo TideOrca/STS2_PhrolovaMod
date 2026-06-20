@@ -32,7 +32,7 @@ namespace Phrolova.PhrolovaCode.Cards
                 {
                     if (enemy.Powers.OfType<DreamMarkPower>().Any())
                     {
-                        await PowerCmd.Apply<DreamMarkPower>(enemy, DynamicVars["DreamStacks"].BaseValue, Owner.Creature, this);
+                        await PowerCmd.Apply<DreamMarkPower>(new ThrowingPlayerChoiceContext(), new[] { enemy }, DynamicVars["DreamStacks"].BaseValue, Owner.Creature, this, false);
                     }
                 }
             }

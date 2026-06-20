@@ -26,12 +26,12 @@ namespace Phrolova.PhrolovaCode.Cards
             {
                 foreach (var enemy in combatState.GetOpponentsOf(Owner.Creature))
                 {
-                    await PowerCmd.Apply<DreamMarkPower>(enemy, stacks, Owner.Creature, this);
+                    await PowerCmd.Apply<DreamMarkPower>(new ThrowingPlayerChoiceContext(), new[] { enemy }, stacks, Owner.Creature, this, false);
                 }
             }
 
             // 获得1层重世
-            await PowerCmd.Apply<RebirthPower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<RebirthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

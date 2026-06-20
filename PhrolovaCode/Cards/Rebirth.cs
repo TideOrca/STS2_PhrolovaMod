@@ -25,7 +25,7 @@ namespace Phrolova.PhrolovaCode.Cards
             if (await TryConsumeRebirth())
             {
                 int stacks = (int)DynamicVars["RebirthStacks"].BaseValue;
-                await PowerCmd.Apply<RebirthPower>(Owner.Creature, stacks, Owner.Creature, this);
+                await PowerCmd.Apply<RebirthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, stacks, Owner.Creature, this, false);
             }
         }
 

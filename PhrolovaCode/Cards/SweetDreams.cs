@@ -16,7 +16,7 @@ namespace Phrolova.PhrolovaCode.Cards
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
             int stacks = (int)DynamicVars["DreamStacks"].BaseValue;
-            await PowerCmd.Apply<SweetDreamsPower>(Owner.Creature, stacks, Owner.Creature, this);
+            await PowerCmd.Apply<SweetDreamsPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, stacks, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

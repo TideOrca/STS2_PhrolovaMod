@@ -26,7 +26,7 @@ namespace Phrolova.PhrolovaCode.Cards
                 .Execute(choiceContext);
 
             // 施加虚弱
-            await PowerCmd.Apply<WeakPower>(cardPlay.Target, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { cardPlay.Target }, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this, false);
 
             // 获得弦乐
             var tuning = Owner.Creature.Powers.OfType<TuningStatePower>().FirstOrDefault();

@@ -25,10 +25,10 @@ namespace Phrolova.PhrolovaCode.Cards
             int dexStacks = (int)DynamicVars["DexterityPerX"].BaseValue * x;
 
             if (platingStacks > 0)
-                await PowerCmd.Apply<PlatingPower>(Owner.Creature, platingStacks, Owner.Creature, this);
+                await PowerCmd.Apply<PlatingPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, platingStacks, Owner.Creature, this, false);
 
             if (dexStacks > 0)
-                await PowerCmd.Apply<DexterityPower>(Owner.Creature, dexStacks, Owner.Creature, this);
+                await PowerCmd.Apply<DexterityPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, dexStacks, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

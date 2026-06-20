@@ -14,7 +14,7 @@ namespace Phrolova.PhrolovaCode.Cards
         };
 
         // 监听虚弱获取
-        public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
+        public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature? applier, CardModel? cardSource)
         {
             if (power is WeakPower && amount > 0 && applier == Owner?.Creature && Pile?.Type == PileType.Hand)
             {

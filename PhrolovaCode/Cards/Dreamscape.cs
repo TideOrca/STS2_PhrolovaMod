@@ -19,7 +19,7 @@ namespace Phrolova.PhrolovaCode.Cards
 
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
-            await PowerCmd.Apply<DreamscapePower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<DreamscapePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

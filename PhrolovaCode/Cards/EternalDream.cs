@@ -26,7 +26,7 @@ namespace Phrolova.PhrolovaCode.Cards
             }
 
             int rebirthStacks = (int)DynamicVars["RebirthStacks"].BaseValue;
-            await PowerCmd.Apply<RebirthPower>(Owner.Creature, rebirthStacks, Owner.Creature, this);
+            await PowerCmd.Apply<RebirthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, rebirthStacks, Owner.Creature, this, false);
 
             var tuning = Owner.Creature.Powers.OfType<TuningStatePower>().FirstOrDefault();
             if (tuning != null)

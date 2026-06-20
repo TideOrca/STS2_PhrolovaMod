@@ -22,10 +22,10 @@ namespace Phrolova.PhrolovaCode.Cards
             await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
 
             // 下回合获得能量（官方能力）
-            await PowerCmd.Apply<EnergyNextTurnPower>(Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<EnergyNextTurnPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, DynamicVars.Energy.BaseValue, Owner.Creature, this, false);
 
             // 下回合获得1枚彩乐（自定义能力）
-            await PowerCmd.Apply<ColorfulNoteNextTurnPower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<ColorfulNoteNextTurnPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

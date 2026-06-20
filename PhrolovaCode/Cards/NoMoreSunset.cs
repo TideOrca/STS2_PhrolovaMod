@@ -43,7 +43,7 @@ namespace Phrolova.PhrolovaCode.Cards
             var canonical = ModelDb.Power<NoMoreSunsetPower>();
             var mutable = (NoMoreSunsetPower)canonical.MutableClone();
             mutable.HealPercent = IsUpgraded ? 30 : 20;
-            _ = PowerCmd.Apply(mutable, Owner.Creature, 1, Owner.Creature, null);
+            _ = PowerCmd.Apply<NoMoreSunsetPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, null, false);
         }
 
         protected override void OnUpgrade()

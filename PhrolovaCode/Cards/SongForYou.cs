@@ -29,9 +29,9 @@ namespace Phrolova.PhrolovaCode.Cards
             var targetCreature = cardPlay.Target;
 
             if (str > 0)
-                await PowerCmd.Apply<StrengthPower>(targetCreature, str, Owner.Creature, this);
+                await PowerCmd.Apply<StrengthPower>(new ThrowingPlayerChoiceContext(), new[] { targetCreature }, str, Owner.Creature, this, false);
             if (dex > 0)
-                await PowerCmd.Apply<DexterityPower>(targetCreature, dex, Owner.Creature, this);
+                await PowerCmd.Apply<DexterityPower>(new ThrowingPlayerChoiceContext(), new[] { targetCreature }, dex, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

@@ -25,7 +25,7 @@ namespace Phrolova.PhrolovaCode.Cards
                 await tuning.ForceAddNote(TuningStatePower.NoteType.Colorful, 1, choiceContext);
 
             // 获得1层重世
-            await PowerCmd.Apply<RebirthPower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<RebirthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
 
             // 获得1费
             await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);

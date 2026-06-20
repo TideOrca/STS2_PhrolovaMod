@@ -20,8 +20,8 @@ namespace Phrolova.PhrolovaCode.Cards
             decimal weakAmount = DynamicVars["WeakAmount"].BaseValue;
             decimal enhanceAmount = DynamicVars["EnhanceAmount"].BaseValue;
 
-            await PowerCmd.Apply<WeakPower>(Owner.Creature, weakAmount, Owner.Creature, this);
-            await PowerCmd.Apply<HecateEnhancePower>(Owner.Creature, enhanceAmount, Owner.Creature, this);
+            await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, weakAmount, Owner.Creature, this, false);
+            await PowerCmd.Apply<HecateEnhancePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, enhanceAmount, Owner.Creature, this, false);
 
             if (await TryConsumeRebirth())
             {

@@ -31,7 +31,7 @@ namespace Phrolova.PhrolovaCode.Cards
             var enemies = combatState.GetOpponentsOf(Owner.Creature).ToList();
             foreach (var enemy in enemies)
             {
-                await PowerCmd.Apply<DreamMarkPower>(enemy, DynamicVars["DreamStacks"].BaseValue, Owner.Creature, this);
+                await PowerCmd.Apply<DreamMarkPower>(new ThrowingPlayerChoiceContext(), new[] { enemy }, DynamicVars["DreamStacks"].BaseValue, Owner.Creature, this, false);
             }
 
             // 判断重世效果

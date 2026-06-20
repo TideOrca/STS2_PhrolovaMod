@@ -17,12 +17,12 @@ namespace Phrolova.PhrolovaCode.Cards
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
             int vigorBase = (int)DynamicVars["VigorBase"].BaseValue;
-            await PowerCmd.Apply<VigorPower>(Owner.Creature, vigorBase, Owner.Creature, this);
+            await PowerCmd.Apply<VigorPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, vigorBase, Owner.Creature, this, false);
 
             if (await TryConsumeRebirth())
             {
                 int extraVigor = (int)DynamicVars["RebirthVigor"].BaseValue;
-                await PowerCmd.Apply<VigorPower>(Owner.Creature, extraVigor, Owner.Creature, this);
+                await PowerCmd.Apply<VigorPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, extraVigor, Owner.Creature, this, false);
             }
         }
 

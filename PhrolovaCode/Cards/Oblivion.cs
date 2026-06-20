@@ -21,7 +21,7 @@ namespace Phrolova.PhrolovaCode.Cards
                     .FromCard(this)
                     .Targeting(cardPlay.Target)
                     .WithHitFx("vfx/vfx_attack_slash")
-                    .Execute(choiceContext)).Results.Any(r => r.WasTargetKilled))
+                    .Execute(choiceContext)).Results.SelectMany(r => r).Any(r => r.WasTargetKilled))
             {
                 var tuning = Owner.Creature.Powers.OfType<TuningStatePower>().FirstOrDefault();
                 if (tuning != null)

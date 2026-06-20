@@ -26,10 +26,10 @@ namespace Phrolova.PhrolovaCode.Cards
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
 
-            int totalDamage = attack.Results.Sum(r => r.UnblockedDamage);
+            int totalDamage = (int)attack.Results.SelectMany(r => r).Sum(r => r.UnblockedDamage);
             if (totalDamage > 0)
             {
-                await PowerCmd.Apply<DreamMarkPower>(cardPlay.Target, totalDamage, Owner.Creature, this);
+                await PowerCmd.Apply<DreamMarkPower>(new ThrowingPlayerChoiceContext(), new[] { cardPlay.Target }, totalDamage, Owner.Creature, this, false);
             }
         }
 

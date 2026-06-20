@@ -37,7 +37,7 @@ namespace Phrolova.PhrolovaCode.Cards
                 var target = rng.NextItem(enemies);
                 if (target != null)
                 {
-                    await PowerCmd.Apply<DreamMarkPower>(target, dreamStacks, Owner.Creature, this);
+                    await PowerCmd.Apply<DreamMarkPower>(new ThrowingPlayerChoiceContext(), new[] { target }, dreamStacks, Owner.Creature, this, false);
                 }
             }
         }

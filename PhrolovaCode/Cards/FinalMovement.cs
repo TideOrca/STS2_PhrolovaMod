@@ -55,7 +55,8 @@ namespace Phrolova.PhrolovaCode.Cards
                 //foreach (var p in Owner.Creature.Powers.OfType<ColorfulNotePower>().ToList()) await PowerCmd.Remove(p);
             }
 
-            var performing = await PowerCmd.Apply<PerformingPower>(Owner.Creature, 1, Owner.Creature, null);
+            var performingList = await PowerCmd.Apply<PerformingPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, null, false);
+            var performing = performingList?.FirstOrDefault();
             if (performing != null)
                 await performing.ApplyNoteEffects(red, blue, colorful);
         }

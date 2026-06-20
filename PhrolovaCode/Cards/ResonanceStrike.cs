@@ -24,7 +24,7 @@ namespace Phrolova.PhrolovaCode.Cards
                 .Execute(choiceContext);
 
             // 整张牌只加一次余响
-            await PowerCmd.Apply<ResonancePower>(Owner.Creature, 1m, Owner.Creature, this);
+            await PowerCmd.Apply<ResonancePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1m, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

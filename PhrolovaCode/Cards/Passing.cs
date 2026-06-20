@@ -15,7 +15,7 @@ namespace Phrolova.PhrolovaCode.Cards
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
             int stacks = (int)DynamicVars["BlockPerRebirth"].BaseValue;
-            await PowerCmd.Apply<RebirthBlockPower>(Owner.Creature, stacks, Owner.Creature, this);
+            await PowerCmd.Apply<RebirthBlockPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, stacks, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

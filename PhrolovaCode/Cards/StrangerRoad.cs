@@ -21,7 +21,7 @@ namespace Phrolova.PhrolovaCode.Cards
 
             foreach (var enemy in combatState.GetOpponentsOf(Owner.Creature))
             {
-                await PowerCmd.Apply<StrangerForceLossPower>(enemy, weakStacks, Owner.Creature, this);
+                await PowerCmd.Apply<StrangerForceLossPower>(new ThrowingPlayerChoiceContext(), new[] { enemy }, weakStacks, Owner.Creature, this, false);
             }
         }
 

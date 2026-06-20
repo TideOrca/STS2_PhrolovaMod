@@ -34,7 +34,7 @@ namespace Phrolova.PhrolovaCode.Cards
             await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
 
             // 3. 获得一层重世（无论之前是否有，都会加上）
-            await PowerCmd.Apply<RebirthPower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<RebirthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

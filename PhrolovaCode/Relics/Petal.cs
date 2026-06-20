@@ -8,7 +8,7 @@ namespace Phrolova.PhrolovaCode.Relics
 
         public override async Task BeforeCombatStart()
         {
-            await PowerCmd.Apply<RebirthPower>(Owner.Creature, 1, Owner.Creature, null);
+            await PowerCmd.Apply<RebirthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, null, false);
         }
     }
 }

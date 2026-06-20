@@ -30,11 +30,11 @@ namespace Phrolova.PhrolovaCode.Cards
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
 
-            await PowerCmd.Apply<WeakPower>(Owner.Creature, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<WeakPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this, false);
 
             if (await TryConsumeRebirth())
             {
-                await PowerCmd.Apply<DreamMarkPower>(cardPlay.Target, DynamicVars["DreamStacks"].BaseValue, Owner.Creature, this);
+                await PowerCmd.Apply<DreamMarkPower>(new ThrowingPlayerChoiceContext(), new[] { cardPlay.Target }, DynamicVars["DreamStacks"].BaseValue, Owner.Creature, this, false);
             }
         }
 

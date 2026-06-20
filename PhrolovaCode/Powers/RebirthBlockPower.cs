@@ -7,7 +7,6 @@ namespace Phrolova.PhrolovaCode.Powers
     {
         public override PowerType Type => PowerType.Buff;
         public override PowerStackType StackType => PowerStackType.Counter; // 每层决定格挡值
-        public override bool IsInstanced => false;
 
         static RebirthBlockPower()
         {

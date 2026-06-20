@@ -23,10 +23,10 @@ namespace Phrolova.PhrolovaCode.Cards
         protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
         {
             int stacks = (int)DynamicVars["DreamMarkStacks"].BaseValue;
-            await PowerCmd.Apply<DreamMarkPower>(cardPlay.Target, stacks, Owner.Creature, this);
+            await PowerCmd.Apply<DreamMarkPower>(new ThrowingPlayerChoiceContext(), new[] { cardPlay.Target }, stacks, Owner.Creature, this, false);
 
             // 获得1层重世
-            await PowerCmd.Apply<RebirthPower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<RebirthPower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

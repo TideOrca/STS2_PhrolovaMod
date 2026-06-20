@@ -23,7 +23,7 @@ namespace Phrolova.PhrolovaCode.Cards
                 .Execute(choiceContext);
 
             // 下一张重世牌耗能变为0
-            await PowerCmd.Apply<RebirthFreePower>(Owner.Creature, 1, Owner.Creature, this);
+            await PowerCmd.Apply<RebirthFreePower>(new ThrowingPlayerChoiceContext(), new[] { Owner.Creature }, 1, Owner.Creature, this, false);
         }
 
         protected override void OnUpgrade()

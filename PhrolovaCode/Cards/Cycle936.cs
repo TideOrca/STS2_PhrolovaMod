@@ -21,7 +21,7 @@ namespace Phrolova.PhrolovaCode.Cards
         }
 
         // 官方的能力层数变化钩子
-        public override async Task AfterPowerAmountChanged(PowerModel power, decimal amount, Creature applier, CardModel cardSource)
+        public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power, decimal amount, Creature applier, CardModel cardSource)
         {
             // 仅当自己施予虚弱且卡牌仍在战斗中时触发
             if (power is not WeakPower || amount <= 0 || applier != Owner?.Creature) return;

@@ -7,7 +7,6 @@ namespace Phrolova.PhrolovaCode.Powers
     {
         public override PowerType Type => PowerType.Buff;
         public override PowerStackType StackType => PowerStackType.Single;
-        public override bool IsInstanced => false;
 
         private int _cardsPlayedThisCycle;
         private readonly List<NoteType> _noteOrder = new();
@@ -94,9 +93,9 @@ namespace Phrolova.PhrolovaCode.Powers
             _noteOrder.Add(type);
             switch (type)
             {
-                case NoteType.Red: await PowerCmd.Apply<RedNotePower>(Owner, 1, Owner, null); break;
-                case NoteType.Blue: await PowerCmd.Apply<BlueNotePower>(Owner, 1, Owner, null); break;
-                case NoteType.Colorful: await PowerCmd.Apply<ColorfulNotePower>(Owner, 1, Owner, null); break;
+                case NoteType.Red: await PowerCmd.Apply<RedNotePower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, 1, Owner, null, false); break;
+                case NoteType.Blue: await PowerCmd.Apply<BlueNotePower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, 1, Owner, null, false); break;
+                case NoteType.Colorful: await PowerCmd.Apply<ColorfulNotePower>(new ThrowingPlayerChoiceContext(), new[] { Owner }, 1, Owner, null, false); break;
             }
 
             // 火炬抽牌效果（联机安全，若没有上下文则使用 ThrowingContext 作为后备）
@@ -144,10 +143,10 @@ namespace Phrolova.PhrolovaCode.Powers
             }
 
             await CardPileCmd.AddToCombatAndPreview<FinalMovement>(
-                Owner,
+                new[] { Owner },
                 PileType.Hand,
                 1,
-                true,
+                Owner?.Player,
                 CardPilePosition.Top
             );
 
