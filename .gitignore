@@ -1,3 +1,14 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# JetBrains Rider / IntelliJ（含本地路径等个人环境信息）
+.idea/
+*.DotSettings.user
+
+# Visual Studio
+.vs/
+*.user
+
+# VS Code
+.vscode/
